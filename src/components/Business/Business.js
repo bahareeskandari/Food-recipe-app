@@ -4,14 +4,14 @@ import './Business.css'
 function Business({business}) {
   return (
     <div className="Business">
-      {/* {business.name} */}
-      {/* <div className="image-container">
+      {business.name}
+      <div className="image-container">
         <img
           src="https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg"
           alt=""
         />
       </div>
-      <h2>MarginOtto Pizzeria</h2>
+      <h2> {business.name}</h2>
       <div className="Business-information">
         <div className="Business-address">
           <p>1010 Paddington Way</p>
@@ -23,7 +23,7 @@ function Business({business}) {
           <h3 className="rating">4.5 stars}</h3>
           <p>90 reviews</p>
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }

@@ -5,16 +5,16 @@ function SearchBar({searchYelp}) {
   const [sortLinks, setSortLinks] = useState({
     term: '',
     location: '',
-    sortBy: 'best_match'
+    sortBy: 'best_match',
   })
 
   const sortByOptions = {
     'Best Match': 'best_match',
     'Highest Rated': 'rating',
-    'Most Reviewed': 'review_count'
+    'Most Reviewed': 'review_count',
   }
 
-  const getSortByClass = sortByOption => {
+  const getSortByClass = (sortByOption) => {
     if (sortLinks.sortBy === sortByOption) {
       return 'active'
     } else {
@@ -22,18 +22,18 @@ function SearchBar({searchYelp}) {
     }
   }
 
-  const handleSortByChange = sortByOption => {
+  const handleSortByChange = (sortByOption) => {
     console.log(sortByOption)
-    // this.setState({...this.state, sortBy: sortByOption})
+    setSortLinks({...sortLinks, sortBy: sortByOption})
   }
-  const handleTermChange = event => {
+  const handleTermChange = (event) => {
     setSortLinks({...sortLinks, term: event.target.value})
   }
-  const handleLocationChange = event => {
+  const handleLocationChange = (event) => {
     setSortLinks({...sortLinks, location: event.target.value})
   }
 
-  const handleSearch = event => {
+  const handleSearch = (event) => {
     const {term, location, sortBy} = sortLinks
     searchYelp(term, location, sortBy)
     event.preventDefault()
@@ -44,7 +44,7 @@ function SearchBar({searchYelp}) {
       <div className="SearchBar">
         <div className="SearchBar-sort-options">
           <ul>
-            {Object.keys(sortByOptions).map(sortByOption => (
+            {Object.keys(sortByOptions).map((sortByOption) => (
               <li
                 key={sortByOption}
                 className={getSortByClass(sortByOption)}
