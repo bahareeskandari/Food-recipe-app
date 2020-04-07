@@ -7,8 +7,8 @@ function BusinessList({businesses}) {
     <div className="BusinessList">
       {/* {businesses.map((business, idx) => (
         <Business business={business} />
-      ))} */}
-      {console.log(businesses)}
+      ))}
+      {console.log(businesses)} */}
     </div>
   )
 }

@@ -10,7 +10,8 @@ function App() {
   const searchYelp = (term, location, sortBy) => {
     Yelp.searchYelp(term, location, sortBy).then((businesses) => {
       console.log(term, location, sortBy)
-      setBusinesses(businesses)
+      console.log(businesses)
+      // setBusinesses(businesses)
     })
   }
   return (

@@ -23,7 +23,6 @@ function SearchBar({searchYelp}) {
   }
 
   const handleSortByChange = (sortByOption) => {
-    console.log(sortByOption)
     setSortLinks({...sortLinks, sortBy: sortByOption})
   }
   const handleTermChange = (event) => {
