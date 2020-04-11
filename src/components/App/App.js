@@ -1,22 +1,21 @@
 import React, {useState} from 'react'
 import './App.css'
-import Yelp from '../util/Yelp'
+import yelp from '../util/yelp'
 import BusinessList from '../BusinessList/BusinessList'
 import SearchBar from '../SearchBar/SearchBar'
 
 function App() {
   const [businesses, setBusinesses] = useState([])
 
-  const searchYelp = (term, location, sortBy) => {
-    Yelp.searchYelp(term, location, sortBy).then((businesses) => {
+  const getBusinesses = (term, location, sortBy) => {
+    yelp.searchYelp(term, location, sortBy).then((businesses) => {
       console.log(term, location, sortBy)
-      console.log(businesses)
-      // setBusinesses(businesses)
+      setBusinesses(businesses)
     })
   }
   return (
     <div className="App">
-      <SearchBar searchYelp={searchYelp} />
+      <SearchBar searchYelp={getBusinesses} />
       <BusinessList businesses={businesses} />
     </div>
   )
