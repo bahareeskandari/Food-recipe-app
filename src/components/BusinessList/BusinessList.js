@@ -1,7 +1,7 @@
 import React from 'react'
 import Business from '../Business/Business'
 import './BusinessList.css'
-
+//test
 function BusinessList({businesses}) {
   return (
     <div className="BusinessList">
