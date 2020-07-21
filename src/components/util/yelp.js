@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === 'production') {
 const yelp =  {
   async searchYelp(term, location, sortBy) {
     return fetch(
-      `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`,
+      `https://baharesfood.herokuapp.com/api/getBusinesses?term=${term}&location=${location}&sortBy=${sortBy}`,
       {headers: {Authorization: `Bearer ${KEYS.REACT_APP_apiKey}`}}
     )
       .then((response) => response.json())
