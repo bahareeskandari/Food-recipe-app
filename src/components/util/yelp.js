@@ -1,19 +1,13 @@
 import React from 'react'
 import SearchBar from '../SearchBar/SearchBar'
-require('es6-promise').polyfill()
-require('isomorphic-fetch')
 
-let KEYS
-if (process.env.NODE_ENV === 'production') {
-  KEYS = process.env
-} else {
-  KEYS = require('../util/keys.json')
-}
-const yelp =  {
+const apiKey =
+  'RYZQu4qcpmV92yqbxWx2AjBqO0J4iNcO6d-_XysNW7w6GrnyBTYdDuv8zqD6eic26Nvfks2VwZ4YPmYNgDX2_yysfq6PyOxFZsG8dldDsVfv6gyLCiI_WUXoa5CDXnYx'
+const yelp = {
   async searchYelp(term, location, sortBy) {
     return fetch(
-      `https://baharesfood.herokuapp.com/api/getBusinesses?term=${term}&location=${location}&sortBy=${sortBy}`,
-      {headers: {Authorization: `Bearer ${KEYS.REACT_APP_apiKey}`}}
+      `https://localhost:9000/api/getBusinesses?term=${term}&location=${location}&sortBy=${sortBy}`,
+      {headers: {Authorization: `Bearer ${apiKey}`}}
     )
       .then((response) => response.json())
       .then((jsonResponse) => {
