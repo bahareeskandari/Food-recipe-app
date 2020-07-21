@@ -6,8 +6,7 @@ require('isomorphic-fetch')
 
 let Keys
 if (process.env.NODE_ENV === 'production') {
-
-  console.log("process env.node")
+  console.log("process env.node", process.env)
   Keys = process.env
 } else {
   console.log('inside local? ', process.env.NODE_ENV)
