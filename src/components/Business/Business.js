@@ -7,7 +7,7 @@ function Business({business}) {
     <div className="Business">
       {name}
       <div className="image-container">
-        <img src={imageSrc} alt="" />
+        <img src={imageSrc} alt="pic" />
       </div>
       <h2> {name}</h2>
       <div className="Business-information">
