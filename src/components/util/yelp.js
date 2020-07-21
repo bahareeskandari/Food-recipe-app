@@ -6,9 +6,11 @@ require('isomorphic-fetch')
 
 let Keys
 if (process.env.NODE_ENV === 'production') {
+
   console.log("process env.node")
   Keys = process.env
 } else {
+  console.log('inside local? ', process.env.NODE_ENV)
   Keys = require('../util/keys.json')
   console.log(Keys, Keys.REACT_APP_APIKEY)
 }
