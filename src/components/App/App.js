@@ -3,7 +3,7 @@ import './App.css'
 import yelp from '../util/yelp'
 import BusinessList from '../BusinessList/BusinessList'
 import SearchBar from '../SearchBar/SearchBar'
-
+//h
 function App() {
   const [businesses, setBusinesses] = useState([])
 
