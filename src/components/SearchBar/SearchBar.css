@@ -2,23 +2,53 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url('https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/background_search_desktop.jpg');
+  background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2F1590082480%2FGettyImages-945578702.jpg%3Fitok%3DzJRb8Xm5');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 25rem;
+  height: 45rem;
 }
+.SearchBar-submit-left h2{
+margin:0 30px;
+padding: 0 10px;
+font-size: 20px;
+color: rgb(255, 255,255,0.6);
+transition: 0.4s;
+margin-bottom: 15px;
+text-decoration: none;
+}
+.SearchBar-submit-left p{
+display: inline;
+  }
+.SearchBar-submit-left {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 30%;
+  max-height: 100%;
+  text-align: center;
+  border-radius: 5px;
+  }
+  .SearchBar-submit-left  img {
+    border-radius: 70%;
+    width: 240px;
+    height: 240px;
+    margin-top: 5%;
+    object-fit: cover;
+    object-position: 0 -8px;
+  }
+
+
 
 .SearchBar-sort-options ul {
   display: flex;
   justify-content: center;
   margin-bottom: 2.22rem;
   color: #ffffff;
+
 }
 
 .SearchBar-sort-options li {
   cursor: pointer;
   width: 4.33rem;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgb(221, 211, 120);
   padding: 0 2.58rem 0.33rem 2.58rem;
   line-height: 1.13;
   text-align: center;

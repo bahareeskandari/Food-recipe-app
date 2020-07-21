@@ -55,11 +55,22 @@ function SearchBar({searchYelp}) {
           </ul>
         </div>
         <div className="SearchBar-fields">
-          <input placeholder="Search Businesses" onChange={handleTermChange} />
-          <input placeholder="Where?" onChange={handleLocationChange} />
+          <input placeholder="Search food" onChange={handleTermChange} />
+          <input placeholder="What city?" onChange={handleLocationChange} />
         </div>
+
         <div className="SearchBar-submit" onClick={handleSearch}>
           <a>Let's Go</a>
+        </div>
+        <div  className="SearchBar-submit-left">
+          <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2F1590082480%2FGettyImages-945578702.jpg%3Fitok%3DzJRb8Xm5" alt="" />
+          <h1>Popular searches</h1>
+          <h2>Italian</h2>
+          <h2>Mexican</h2>
+          <h2>Asian</h2>
+          <h2>New York</h2>
+          <h2>Boston</h2>
+
         </div>
       </div>
     </div>

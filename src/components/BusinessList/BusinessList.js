@@ -5,7 +5,8 @@ import './BusinessList.css'
 function BusinessList({businesses}) {
   return (
     <div className="BusinessList">
-      {businesses.map((business, idx) => (
+
+      { businesses.map((business, idx) => (
         <Business business={business} />
       ))}
     </div>
