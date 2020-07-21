@@ -5,7 +5,6 @@ function Business({business}) {
   const {name, imageSrc} = business
   return (
     <div className="Business">
-      {console.log(business)}
       {name}
       <div className="image-container">
         <img src={imageSrc} alt="" />

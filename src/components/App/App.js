@@ -9,7 +9,6 @@ function App() {
 
   const getBusinesses = (term, location, sortBy) => {
     yelp.searchYelp(term, location, sortBy).then((businesses) => {
-      console.log(term, location, sortBy)
       setBusinesses(businesses)
     })
   }
