@@ -1,13 +1,24 @@
 import React from 'react'
 import SearchBar from '../SearchBar/SearchBar'
 
-const apiKey =
-  'RYZQu4qcpmV92yqbxWx2AjBqO0J4iNcO6d-_XysNW7w6GrnyBTYdDuv8zqD6eic26Nvfks2VwZ4YPmYNgDX2_yysfq6PyOxFZsG8dldDsVfv6gyLCiI_WUXoa5CDXnYx'
+require('es6-promise').polyfill()
+require('isomorphic-fetch')
+
+let Keys
+if (process.env.NODE_ENV === 'production') {
+  console.log("process env.node")
+  Keys = process.env
+} else {
+  Keys = require('../util/keys.json')
+  console.log(Keys, Keys.REACT_APP_APIKEY)
+}
+//https://baharesfood.herokuapp.com/api/getBusinesses?term=${term}&location=${location}&sortBy=${sortBy}
+//Keys.REACT_APP_APIKEY
 const yelp = {
   async searchYelp(term, location, sortBy) {
     return fetch(
-      `https://localhost:9000/api/getBusinesses?term=${term}&location=${location}&sortBy=${sortBy}`,
-      {headers: {Authorization: `Bearer ${apiKey}`}}
+      `https://baharesfood.herokuapp.com/api/getBusinesses?term=${term}&location=${location}&sortBy=${sortBy}`,
+      {headers: {Authorization: `Bearer ${Keys.REACT_APP_APIKEY}`}}
     )
       .then((response) => response.json())
       .then((jsonResponse) => {
@@ -25,7 +36,7 @@ const yelp = {
           })
         }
       })
-      .catch((error) => console.log(error))
+
   },
 }
 export default yelp
