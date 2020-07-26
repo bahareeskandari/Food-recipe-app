@@ -6,12 +6,9 @@ require('isomorphic-fetch')
 
 let Keys
 if (process.env.NODE_ENV === 'production') {
-  console.log("process env.node", process.env)
   Keys = process.env
 } else {
-  console.log('inside local? ', process.env.NODE_ENV)
   Keys = require('../util/keys.json')
-  console.log(Keys, Keys.REACT_APP_APIKEY)
 }
 //https://baharesfood.herokuapp.com/api/getBusinesses?term=${term}&location=${location}&sortBy=${sortBy}
 //Keys.REACT_APP_APIKEY
@@ -25,8 +22,12 @@ const yelp = {
       .then((jsonResponse) => {
         if (jsonResponse.businesses) {
           return jsonResponse.businesses.map((business) => {
+            console.log(business)
             return {
               id: business.id,
+              rating: business.rating,
+              open: business.is_closed,
+              price: business.price,
               imageSrc: business.image_url,
               name: business.name,
               address: business.location.address1,
@@ -37,7 +38,6 @@ const yelp = {
           })
         }
       })
-
   },
 }
 export default yelp

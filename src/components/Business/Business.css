@@ -4,6 +4,12 @@
   justify-content: space-between;
   width: 16.66rem;
   margin: 0 0.5rem 2.3rem 0.5rem;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  border: 0 solid transparent;
+  font-family: 'Inter' !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 6px rgba(0, 0, 0, 0.12);
 }
 
 .Business .image-container {
@@ -20,12 +26,6 @@
 .Business-information {
   display: flex;
   justify-content: space-between;
-}
-
-.Business-information p {
-  font-size: 0.88rem;
-  font-weight: 300;
-  line-height: 1rem;
 }
 
 .Business-address {
