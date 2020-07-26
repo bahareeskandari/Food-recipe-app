@@ -13,7 +13,7 @@ function Business({business}) {
         <h3>{name}</h3>
         <div className="Business-address">{city}</div>
         <br />
-        <div className="Business-reviews">Stars {rating}</div>
+        <div className="Business-reviews">Stars{rating}</div>
       </div>
     </div>
   )
